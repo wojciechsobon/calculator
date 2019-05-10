@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Kalkulator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        #wrapper {
+            width:400px;
+            background-color: honeydew;
+            padding: 10px;
+            margin: 0 auto 0 auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id ="wrapper">
+        <p>Testowy kalkulator</p>
+        <center>
+            <form>
+                Liczba1:<br />
+                <input type="text" name="Liczba1" />
+                <br /><br />
+                Liczba2:<br />
+                <input type="text" name="Liczba2" />
+
+                <br /><br />
+                <input type="radio" name="mathType" value="Dodaj"/>Dodaj<br/>
+                <input type="radio" name="mathType" value="Odejmij"/>Odejmij<br/>
+                <input type="radio" name="mathType" value="Podziel"/>Podziel
+                <br /><br />
+                <input type="submit" value="Oblicz" />
+                <div th:if="${result} != null">
+                    <p th:text= "'Wynik: ' + ${result}"/>
+                </div>
+            </form>
+        </center>
+    </div>
+</body>
+</html>

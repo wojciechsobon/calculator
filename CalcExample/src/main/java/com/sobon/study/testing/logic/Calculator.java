@@ -6,6 +6,10 @@ public class Calculator {
     }
 
     public static double divide(String number1, String number2) {
+        if ("0".equals(number2)) {
+            throw new RuntimeException();
+
+        }
         return Double.parseDouble(number1) / Double.parseDouble(number2);
     }
 

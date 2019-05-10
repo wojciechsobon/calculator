@@ -1,4 +1,5 @@
 package com.sobon.study.testing.controller;
+import com.sobon.study.testing.logic.Calculator;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,13 +18,13 @@ public class Home {
         if (number1 != null && number2 != null && mathType != null) {
             switch (mathType) {
                 case "Dodaj" :
-                    model.addAttribute("result", Double.parseDouble(number1) + Double.parseDouble(number2));
+                    model.addAttribute("result", Calculator.add(number1, number2));
                     break;
                 case "Odejmij" :
-                    model.addAttribute("result", Double.parseDouble(number1) * Double.parseDouble(number2));
+                    model.addAttribute("result", Calculator.subtract(number1, number2));
                     break;
                 case "Podziel" :
-                    model.addAttribute("result", Double.parseDouble(number1) / Double.parseDouble(number2));
+                    model.addAttribute("result", Calculator.divide(number1, number2));
                     break;
                 default:
                     throw new RuntimeException("Unsupported operation");

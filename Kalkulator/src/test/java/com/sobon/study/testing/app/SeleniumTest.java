@@ -37,7 +37,7 @@ public class SeleniumTest {
     }
 
     @AfterClass
-    public static void cleanUp() {
+    public static void clean() {
         driver.close();
     }
 
@@ -58,4 +58,37 @@ public class SeleniumTest {
         assertEquals("Wynik: 3.0", page.getResult());
     }
 
+    @Test
+    public void subtractTest() {
+        page.openPage();
+        page.setFirstNumber("1000");
+        page.setSecondNumber("899");
+        page.chooseOperation("subtract");
+        page.sumbit();
+
+        assertEquals("Wynik: 101.0", page.getResult());
+
+    }
+
+    @Test
+    public void divideTest() {
+        page.openPage();
+        page.setFirstNumber("10");
+        page.setSecondNumber("5");
+        page.chooseOperation("divide");
+        page.sumbit();
+
+        assertEquals("Wynik: 2.0", page.getResult());
+    }
+
+    @Test
+    public void multiplyTest() {
+        page.openPage();
+        page.setFirstNumber("1000");
+        page.setSecondNumber("10");
+        page.chooseOperation("multiply");
+        page.sumbit();
+
+        assertEquals("Wynik: 10000.0", page.getResult());
+    }
 }

@@ -26,9 +26,11 @@ public class Home {
                 case "Podziel":
                     model.addAttribute("result", Calculator.divide(number1, number2));
                     break;
+                case "Pomnóż":
+                    model.addAttribute("result", Calculator.multiply(number1, number2));
+                    break;
                 default:
                     throw new RuntimeException("Unsupported operation");
-
             }
         }
         return "index";

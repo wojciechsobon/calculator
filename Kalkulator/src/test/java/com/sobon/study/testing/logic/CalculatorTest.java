@@ -38,4 +38,15 @@ public class CalculatorTest {
     public void subtractFail() {
         assertEquals(4, Calculator.subtract("five", "1"), 0);
     }
+
+    @Test
+    public void simpleMultiply() {
+        assertEquals(40, Calculator.multiply("20", "2"), 0);
+        assertEquals(200, Calculator.multiply("-20", "-10"), 0);
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void multiplyFail() {
+        assertEquals(0, Calculator.multiply("b", "0"), 0);
+    }
 }

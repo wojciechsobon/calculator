@@ -20,13 +20,13 @@ import org.springframework.web.context.WebApplicationContext;
 public class AppTest {
 
     @Autowired
-    private WebApplicationContext context;
+    private WebApplicationContext wac;
 
     private MockMvc mockMvc;
 
     @Before
     public void setUp() {
-        mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
+        mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
     }
 
     @Test

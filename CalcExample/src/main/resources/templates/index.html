@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Kalkulator</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style>
         #wrapper {
             width:400px;
@@ -11,30 +11,31 @@
             margin: 0 auto 0 auto;
             border-radius: 5px;
         }
+
     </style>
 </head>
 <body>
-    <div id ="wrapper">
-        <p>Testowy kalkulator</p>
-        <center>
-            <form>
-                Liczba1:<br />
-                <input type="text" name="Liczba1" />
-                <br /><br />
-                Liczba2:<br />
-                <input type="text" name="Liczba2" />
+<div id="wrapper">
+    <p>Testowy kalkulator</p>
+    <center>
+        <form>
+            Liczba1:<br/>
+            <input type="text" name="Liczba1"/>
+            <br/><br/>
+            Liczba2:<br/>
+            <input type="text" name="Liczba2"/>
 
-                <br /><br />
-                <input type="radio" name="mathType" value="Dodaj" id="add"/>Dodaj<br/>
-                <input type="radio" name="mathType" value="Odejmij" id="subtract"/>Odejmij<br/>
-                <input type="radio" name="mathType" value="Podziel" id="divide"/>Podziel
-                <br /><br />
-                <input type="submit" value="Oblicz" id="submit"/>
-                <div th:if="${result} != null">
-                    <p th:id="result" th:text= "'Wynik: ' + ${result}"/>
-                </div>
-            </form>
-        </center>
-    </div>
+            <br/><br/>
+            <input type="radio" name="mathType" value="Dodaj" id="add"/>Dodaj<br/>
+            <input type="radio" name="mathType" value="Odejmij" id="subtract"/>Odejmij<br/>
+            <input type="radio" name="mathType" value="Podziel" id="divide"/>Podziel
+            <br/><br/>
+            <input type="submit" value="Oblicz" id="submit"/>
+            <div th:if="${result} != null">
+                <p th:id="result" th:text="'Wynik: ' + ${result}"/>
+            </div>
+        </form>
+    </center>
+</div>
 </body>
 </html>

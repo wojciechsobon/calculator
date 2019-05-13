@@ -44,18 +44,18 @@ public class SeleniumTest {
     @Test
     public void pageLoads() {
         page.openPage();
-        assertEquals("Kalkulator",page.getTitle());
+        assertEquals("Kalkulator", page.getTitle());
     }
 
     @Test
-    public void addTest(){
+    public void addTest() {
         page.openPage();
         page.setFirstNumber("1");
         page.setSecondNumber("2");
         page.chooseOperation("add");
         page.sumbit();
 
-        assertEquals("Wynik: 3.0",page.getResult());
+        assertEquals("Wynik: 3.0", page.getResult());
     }
 
 }

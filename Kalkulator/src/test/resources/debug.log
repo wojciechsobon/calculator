@@ -1,0 +1,2 @@
+[0513/210936.868:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[0513/210936.883:ERROR:exception_snapshot_win.cc(98)] thread ID 13316 not found in process
